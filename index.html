@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Tab Container #2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script type="text/javascript">
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.toggle('dark', true);
+    }
+</script>
+<div class="outer flex sm:items-center items-top gap-4 space-x-2 dark:bg-gray-900">
+    <div class="inner">
+        <div class="window">
+            <div class="divide-y divide-slate-300/50">
+                <tab-container class="w-full">
+                    <div role="tablist">
+                        <button type="button" role="tab" id="PNPM" aria-label="PNPM" aria-selected="true"><span>PNPM</span></button>
+                        <button type="button" role="tab" tabindex="-1" id="Yarn" aria-label="Yarn"><span>Yarn</span></button>
+                        <button type="button" role="tab" tabindex="-1" id="NPM" aria-label="NPM"><span>NPM</span></button>
+                    </div>
+                    <div class="tabpanels max-w-fit">
+                        <div role="tabpanel" aria-labelledby="PNPM">
+                            <pre data-language="bash" class="text-xl px-4 py-2 bg-gray-50 border-2 border-gray-200 rounded-md mb-2"><code><span>pnpm i -D @svelterun/store</span></code></pre>
+                        </div>
+                        <div role="tabpanel" aria-labelledby="Yarn" hidden>
+                            <pre data-language="bash" class="text-xl px-4 py-2 bg-gray-50 border border-gray-200 rounded-md mb-2"><code><span>yarn add -D @svelterun/store</span></code></pre>
+                        </div>
+                        <div role="tabpanel" aria-labelledby="NPM" hidden>
+                            <pre data-language="bash" class="text-xl px-4 py-2 bg-gray-50 border border-gray-200 rounded-md mb-2"><code><span>npm i -D @svelterun/store</span></code></pre>
+                        </div>
+                    </div>
+                </tab-container>
+                <footer>
+                    <a href="https://github.com/nberlette">view source on <strong>github</strong> →</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind-dark.min.css" />
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
