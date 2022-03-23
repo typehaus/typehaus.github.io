@@ -2,21 +2,28 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>typehaus.org</title>
+  <title>Beautiful open source fonts ~ typehaus.org</title>
+  <link rel="prefetch" as="style" type="text/css" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind-dark.min.css" crossorigin="anonymous" />
+  <link rel="prefetch" as="style" type="text/css" href="/assets/style.css" />
+  <link rel="prefetch" as="style" type="text/css" href="/assets/tabs.css" />
+  <link rel="prefetch" as="module" href="/assets/tabs.js" />
   <meta name="title" content="typehaus.org" />
-  <meta name="description" content="TypeHaus is an open source curator of typefaces, typography tools, and other font resources." />
-  <meta name="keywords" content="typehaus,typefaces,fonts,font families,typography," />
-  <link rel="prefetch" as="style" type="text/css" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind-dark.min.css" crossorigin="anonymous" />
-  <link rel="prefetch" as="style" type="text/css" href="./style.css" />
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind-dark.min.css" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <link rel="prefetch" as="module" href="./script.js" />
+  <meta name="description" content="typehaus.org is a non-profit curator of beautiful open-source typefaces." />
+  <meta name="keywords" content="typehaus,typefaces,tipografia,fonts,fontface,typography,open source,opensource,foss,woff,woff2,truetype,ttf,otf,opentype" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://typehaus.org/" />
+  <meta property="og:title" content="typehaus.org" />
+  <meta property="og:description" content="typehaus.org is a non-profit font curator of beautiful open-source typefaces." />  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind-dark.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/tabs.css" />
 </head>
 <body>
-<script type="text/javascript">
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.classList.toggle('dark', true);
-    }
+<script>
+    try {
+        if (!('theme' in localStorage)) localStorage.theme = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+        if (localStorage.theme === 'dark') document.querySelector('html').classList.toggle('dark', true);
+    }catch{}
 </script>
 <div class="outer flex sm:items-center items-top gap-4 space-x-2 dark:bg-gray-900">
     <div class="inner">
